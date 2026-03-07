@@ -9,11 +9,16 @@
 
     <title>Ціль</title>
 
-    <meta name="description" content="Надійна українська мова програмування" />
+    <meta
+      name="description"
+      content="Платформа для низькорівневого й системного програмування. Українською!"
+    />
     <meta
       name="keywords"
-      content="ціль, мова програмування, програмування, українська мова програмування, українська мова, ціль мова програмування, ціль мова"
+      content="ціль, мова програмування, програмування, українська мова програмування, українська мова, ціль мова програмування, ціль мова, ціль платформа"
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ціль.укр/" />
 
     <link rel="icon" type="image/png" href="./ресурси/ціль.лого.png" />
     <link
@@ -125,12 +130,21 @@
       }
 
       .UiMainHeadName {
+        margin: 0;
         font-size: 2rem;
         font-weight: bold;
         line-height: 1;
       }
 
+      .UiMainHeadNameAlpha {
+        font-size: 1rem;
+        color: #7d2e34;
+        font-style: italic;
+        font-weight: lighter;
+      }
+
       .UiMainHeadSubname {
+        margin: 0;
         margin-top: 0.125rem;
         font-size: 0.875rem;
         line-height: 1;
@@ -139,17 +153,12 @@
 
       .UiMainTitle {
         z-index: 10;
+        margin: 0;
         margin-top: 1rem;
         margin-bottom: 1rem;
         max-width: 30ch;
         font-size: 1.25rem;
         text-align: left;
-      }
-
-      .UiMainTitleAlpha {
-        color: #7d2e34;
-        font-style: italic;
-        font-weight: lighter;
       }
 
       .UiMainButton {
@@ -168,8 +177,9 @@
         text-align: center;
       }
 
-      .UiMainButton svg {
-        height: 1rem;
+      .UiMainButton svg,
+      .UiMainButton img {
+        height: 1.25rem;
       }
 
       .UiMainButton:hover {
@@ -209,6 +219,46 @@
         height: 2.5rem;
       }
 
+      .UiMainButton.github {
+        font-size: 0.6rem;
+      }
+
+      a[href*="storinka.ua"] svg path:nth-child(1) {
+        fill: #ee9a3d;
+        transition: fill 0.2s ease;
+      }
+
+      a[href*="storinka.ua"] svg path:nth-child(2) {
+        fill: #7d2e34;
+        transition: fill 0.2s ease;
+      }
+
+      a[href*="storinka.ua"] svg path:nth-child(3) {
+        fill: #1d1315;
+        transition: fill 0.2s ease;
+      }
+
+      a[href*="storinka.ua"] svg path:nth-child(4) {
+        fill: #ffe173;
+        transition: fill 0.2s ease;
+      }
+
+      a[href*="storinka.ua"]:hover svg path:nth-child(1) {
+        fill: #f44336;
+      }
+
+      a[href*="storinka.ua"]:hover svg path:nth-child(2) {
+        fill: #4caf50;
+      }
+
+      a[href*="storinka.ua"]:hover svg path:nth-child(3) {
+        fill: #3f51b5;
+      }
+
+      a[href*="storinka.ua"]:hover svg path:nth-child(4) {
+        fill: #ffeb3b;
+      }
+
       .UiMainButtons {
         display: flex;
         flex-direction: column;
@@ -241,7 +291,7 @@
 
       .UiMainButtonsThirdLine {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr;
         grid-gap: 0.5rem;
       }
 
@@ -474,6 +524,74 @@
         }
       }
 
+      .TsilNavigationMenu {
+        position: fixed;
+        z-index: 1003;
+        top: calc(var(--menu-top) + 2.5rem + 0.5rem);
+        left: calc(var(--menu-left) - 180px + 2.5rem);
+        background-color: #fff6e0;
+        border: 1px solid #7d2e34;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 180px;
+        color: #7d2e34;
+      }
+
+      .TsilNavigationMenu[data-hidden="true"] {
+        display: none;
+      }
+
+      [data-navigation-menu-toggle="true"] [data-close-icon] {
+        display: none;
+      }
+
+      [data-navigation-menu-toggle="true"].active [data-menu-icon] {
+        display: none;
+      }
+
+      [data-navigation-menu-toggle="true"].active [data-close-icon] {
+        display: block;
+      }
+
+      .TsilNavigationMenu:has(.TsilNavigationMenuItem:hover) {
+        border-color: #1d1315;
+        color: #1d1315;
+      }
+
+      .TsilNavigationMenu:has(.TsilNavigationMenuItem:active) {
+        border-color: black;
+        color: black;
+      }
+
+      .TsilNavigationMenuItem {
+        height: 2.5rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 12px;
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        color: inherit;
+      }
+
+      .TsilNavigationMenuItem:hover {
+        background: #1d1315;
+        color: white;
+        cursor: pointer;
+      }
+
+      .TsilNavigationMenuItem:active {
+        background: black;
+        color: white;
+      }
+
       @media (max-width: 420px) {
         .UiMain {
           padding: 1.5rem 1rem;
@@ -496,33 +614,32 @@
   </head>
 
   <body>
-    <div class="UiMain">
+    <main class="UiMain">
       <div class="UiMainLeft">
         <div class="UiMainHead">
           <div class="UiMainHeadLogo">
-            <img src="./ресурси/ціль.лого.svg" alt="" />
+            <img src="./ресурси/ціль.лого.svg" alt="Логотип Ціль" />
           </div>
           <div class="UiMainHeadNameContainer">
-            <div class="UiMainHeadName">Ціль</div>
-            <div class="UiMainHeadSubname">Україна = створити(Рай)</div>
+            <h1 class="UiMainHeadName">Ціль</h1>
+            <p class="UiMainHeadSubname">Україна = створити(Рай)</p>
           </div>
         </div>
 
-        <div class="UiMainTitle">
-          Звичайна мова для створення програм. Українською!
-          <span class="UiMainTitleAlpha">(альфа)</span>
-        </div>
+        <p class="UiMainTitle">
+          Платформа для низькорівневого й системного програмування.
+        </p>
 
         <div class="UiMainButtons">
           <div class="UiMainButtonsFirstLine">
             <a
-              href="https://архів.ціль.укр/випуск-цілі-0.51.0.html"
+              href="https://архів.ціль.укр/випуск-цілі-0.53.0.html"
               class="UiMainButton"
             >
-              Завантажити (0.51.0)
+              Завантажити (0.53.0)
             </a>
             <a
-              href="./0.51.0/документація/index.html"
+              href="./0.53.0/документація/index.html"
               class="UiMainButton outline"
             >
               Документація
@@ -540,20 +657,23 @@
               Архів
             </a>
             <a
-              href="https://часопис.ціль.укр"
+              href="./інформація/index.html"
               class="UiMainButton light outline"
             >
-              Часопис
-            </a>
-            <a
-              target="_blank"
-              href="https://github.com/tsil-ukr/tsil"
-              class="UiMainButton light outline"
-            >
-              GitHub
+              Інформація
             </a>
           </div>
         </div>
+      </div>
+
+      <div class="TsilNavigationMenu" data-hidden="true">
+        <a
+          target="_blank"
+          href="https://github.com/tsil-ukr/tsil"
+          class="TsilNavigationMenuItem"
+        >
+          GitHub
+        </a>
       </div>
 
       <div class="UiMainRight">
@@ -565,7 +685,7 @@
               tabindex="0"
             ><code class="shikicode"><span class="line"><span style="color:#F97583">взяти біб</span><span style="color:#E1E4E8"> надрукувати;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">зовнішня</span><span style="color:#F97583"> дія</span><span style="color:#E1E4E8"> старт() -&gt; </span><span style="color:#79B8FF">ц32</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">дія</span><span style="color:#E1E4E8"> почати() -&gt; </span><span style="color:#79B8FF">ц32</span><span style="color:#E1E4E8"> {</span></span>
 <span class="line"><span style="color:#E1E4E8">  біб::надрукувати(</span><span style="color:#9ECBFF">"Вперед до Цілі!"</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">  вернути</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
@@ -573,7 +693,7 @@
 <span class="line"></span></code></pre>
           </div>
 
-          <div class="UiRunCommand">ціль привіт перетворити привіт.ц</div>
+          <div class="UiRunCommand">ціль привіт зібрати привіт.ц</div>
         </div>
 
         <div class="UiOrganization">
@@ -581,7 +701,130 @@
           <span>Ц</span>
         </div>
       </div>
-    </div>
+    </main>
+
+    <script>
+      function isMobileDevice() {
+        return (
+          window.matchMedia("(max-width: 768px)").matches ||
+          "ontouchstart" in window ||
+          navigator.maxTouchPoints > 0
+        );
+      }
+
+      function showMenu() {
+        const menuButton = document.querySelector(
+          "[data-navigation-menu-toggle=true]",
+        );
+        menuButton.classList.add("active");
+        menuButton.setAttribute("aria-expanded", "true");
+        const buttonLeft = menuButton.getBoundingClientRect().left;
+        const buttonTop = menuButton.getBoundingClientRect().top;
+        document.documentElement.style.setProperty(
+          "--menu-left",
+          `${buttonLeft}px`,
+        );
+        document.documentElement.style.setProperty(
+          "--menu-top",
+          `${buttonTop}px`,
+        );
+        const menu = document.querySelector(".TsilNavigationMenu");
+        menu.dataset.hidden = "false";
+      }
+
+      function hideMenu() {
+        const menuButton = document.querySelector(
+          "[data-navigation-menu-toggle=true]",
+        );
+        menuButton.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+        const menu = document.querySelector(".TsilNavigationMenu");
+        menu.dataset.hidden = "true";
+      }
+
+      const menuButton = document.querySelector(
+        "[data-navigation-menu-toggle=true]",
+      );
+      const menu = document.querySelector(".TsilNavigationMenu");
+
+      let isHoveringButton = false;
+      let isHoveringMenu = false;
+      let hideTimeout = null;
+
+      function scheduleHide() {
+        clearTimeout(hideTimeout);
+        hideTimeout = setTimeout(() => {
+          if (!isHoveringButton && !isHoveringMenu) {
+            hideMenu();
+          }
+        }, 100);
+      }
+
+      menuButton.addEventListener("click", () => {
+        if (isMobileDevice()) {
+          const isHidden = menu.dataset.hidden === "true";
+          if (isHidden) {
+            showMenu();
+          } else {
+            hideMenu();
+          }
+        }
+      });
+
+      menuButton.addEventListener("mouseenter", () => {
+        if (!isMobileDevice()) {
+          isHoveringButton = true;
+          clearTimeout(hideTimeout);
+          showMenu();
+        }
+      });
+
+      menuButton.addEventListener("mouseleave", () => {
+        if (!isMobileDevice()) {
+          isHoveringButton = false;
+          scheduleHide();
+        }
+      });
+
+      menu.addEventListener("mouseenter", () => {
+        if (!isMobileDevice()) {
+          isHoveringMenu = true;
+          clearTimeout(hideTimeout);
+          showMenu();
+        }
+      });
+
+      menu.addEventListener("mouseleave", () => {
+        if (!isMobileDevice()) {
+          isHoveringMenu = false;
+          scheduleHide();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        hideMenu();
+      });
+
+      window.addEventListener("scroll", () => {
+        hideMenu();
+      });
+
+      window.addEventListener("click", (event) => {
+        if (
+          isMobileDevice() &&
+          !event.target.closest(".TsilNavigationMenu") &&
+          !event.target.closest("[data-navigation-menu-toggle=true]")
+        ) {
+          hideMenu();
+        }
+      });
+
+      window.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          hideMenu();
+        }
+      });
+    </script>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
