@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="xdocs-url-prefix" content="{{PAGE_URL_PREFIX}}">
+</head>
+<body>
+
+<script>
+  const searchData = JSON.parse("[{\"title\":\"Архів Цілі\",\"content\":\"# Архів Цілі\\n\\nАрхів Цілі зберігає випуски Цілі та різні інші файли, повʼязані з Ціллю.\",\"path\":\"index.html\"},{\"title\":\"Ціль 0.53.0 | Архів Цілі\",\"content\":\"# Ціль 0.53.0\\n\\nЦіль 0.53.0 принесла різні покращення й виправлення.\\n\\n| Назва       | Файли                                                                                                   |\\n| ----------- | ------------------------------------------------------------------------------------------------------- |\\n| Ціль 0.53.0 | [ціль-0.53.0.tar.xz](https://github.com/tsil-ukr/files/raw/main/випуски-цілі/0.53.0/ціль-0.53.0.tar.xz) |\\n\\n## GNU/Linux\\n\\n| Назва                            | Файли                                                                                                                                   |\\n| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |\\n| Ціль 0.53.0 для GNU/Linux x86_64 | [ціль-0.53.0-лінукс-ікс86_64.tar.xz](https://github.com/tsil-ukr/files/raw/main/випуски-цілі/0.53.0/ціль-0.53.0-лінукс-ікс86_64.tar.xz) |\\n\\n## [укр](https://укр.кдб.укр) _0.3.0_\\n\\n```shell\\nукр встановити ціль 0.53.0\\n```\\n\\n## Зміни\\n\\n- підлаштовано під Ціль 0.52.0\\n\",\"path\":\"випуск-цілі-0.53.0.html\"}]");
+
+  window.addEventListener("message", (event) => {
+    const eventData = event.data;
+    const eventId = eventData.id;
+    const eventType = eventData.type;
+    if (eventType === "search") {
+      const query = eventData.query;
+      const results = searchData.filter((item) => {
+        return item.title.toLowerCase().includes(query.toLowerCase());
+      });
+      window.parent.postMessage(
+        {
+          id: eventId,
+          result: results
+        },
+        "*"
+      );
+    }
+  });
+</script>
+</body>
+</html>
