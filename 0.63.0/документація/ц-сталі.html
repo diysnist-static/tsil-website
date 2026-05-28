@@ -11,7 +11,7 @@
 
   <meta name="description" content="">
 
-  <title>Змінні | Документація Цілі 0.63.0</title>
+  <title>Сталі | Документація Цілі 0.63.0</title>
 
   <link rel="icon" type="image/png" href="./ресурси/тема/ціль.лого.png" />
   <link rel="icon" sizes="any" type="image/svg+xml" href="./ресурси/тема/ціль.лого.svg">
@@ -40,12 +40,12 @@
 </a>
 <button
   class="XDocsPageNavigationItem"
-  data-navigation-item="Мова К"
+  data-navigation-item="Мова Ц"
   data-navigation-item-expanded-name=""
   data-navigation-item-expanded="true"
 >
   <span class="XDocsPageNavigationItemName"
-    >Мова К</span
+    >Мова Ц</span
   >
   <span class="XDocsPageNavigationItemArrow">
     <svg
@@ -61,74 +61,74 @@
 </button>
 <div
   class="XDocsPageNavigationSubmenu"
-  data-navigation-submenu="Мова К"
+  data-navigation-submenu="Мова Ц"
   data-navigation-submenu-shown="true"
 >
   <a
-  href="./к-перша-програма.html"
+  href="./ц-перша-програма.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Перша програма"
 >
   Перша програма
 </a>
 <a
-  href="./к-типизація.html"
+  href="./ц-типизація.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Типизація"
 >
   Типизація
 </a>
 <a
-  href="./к-змінні.html"
-  class="XDocsPageNavigationSubmenuItem active"
+  href="./ц-змінні.html"
+  class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Змінні"
 >
   Змінні
 </a>
 <a
-  href="./к-сталі.html"
-  class="XDocsPageNavigationSubmenuItem "
+  href="./ц-сталі.html"
+  class="XDocsPageNavigationSubmenuItem active"
   data-navigation-item="Сталі"
 >
   Сталі
 </a>
 <a
-  href="./к-дії.html"
+  href="./ц-дії.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Дії"
 >
   Дії
 </a>
 <a
-  href="./к-структури.html"
+  href="./ц-структури.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Структури"
 >
   Структури
 </a>
 <a
-  href="./к-умови.html"
+  href="./ц-умови.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Умови"
 >
   Умови
 </a>
 <a
-  href="./к-повтори.html"
+  href="./ц-повтори.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Повтори"
 >
   Повтори
 </a>
 <a
-  href="./к-операції.html"
+  href="./ц-операції.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Операції"
 >
   Операції
 </a>
 <a
-  href="./к-простори.html"
+  href="./ц-простори.html"
   class="XDocsPageNavigationSubmenuItem "
   data-navigation-item="Простори"
 >
@@ -155,46 +155,40 @@
   </button>
   <div class="XDocsPageContent">
     
-    <h1>Змінні</h1>
-<p>Запис змінних в Цілі відбувається так:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> назва: Тип;</span></span>
+    <h1>Сталі</h1>
+<p>Запис сталих в Цілі відбувається так:</p>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> назва: Тип = значення;</span></span>
 <span class="line"></span></code></pre></div></pre>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> назва: Тип = значення;</span></span>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> назва = значення;</span></span>
 <span class="line"></span></code></pre></div></pre>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> назва = значення;</span></span>
+<p>Стала повинна мати визначене значення. Значення сталих не можна перезаписувати:</p>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> а = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">а = </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// помилка компіляції</span></span>
 <span class="line"></span></code></pre></div></pre>
-<p>Змінна з вказаним типом і без вказаного значення буде мати невизначене значення, яке може містити сміттєві дані.
-Це може бути в нагоді для певних оптимізації вашої програми, адже жодного автоматичного заповнення під час виконання не
-буде:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// а матиме невідоме</span></span>
-<span class="line"><span style="color:#6A737D">                // сміттєве значення</span></span>
-<span class="line"></span></code></pre></div></pre>
-<p>Значення змінних можна перезаписувати:</p>
+<p>Стала без вказаного типу і з вказаним значенням буде мати тип цього значення:</p>
 <pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8"> = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">а = </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">а = </span><span style="color:#79B8FF">36</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">а = -</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> б = а; </span><span style="color:#6A737D">// б є ціле і б == 10</span></span>
 <span class="line"></span></code></pre></div></pre>
-<p>Змінна без вказаного типу і з вказаним значенням буде мати тип цього значення:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8"> = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> б = а; </span><span style="color:#6A737D">// б є ціле і б == 10</span></span>
-<span class="line"></span></code></pre></div></pre>
-<p>В Цілі можна створювати глобальні змінні.</p>
-<p>Глобальна змінна повинна мати тип і не може мати попередньо визначного значення. Значення записується під час виконання:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> глоб_а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
+<p>В Цілі можна створювати глобальні сталі.</p>
+<p>Глобальна стала може бути зовнішньою, місцевою чи внутрішньою.</p>
+<p>Глобальна стала може не мати визначеного значення, але, в такому випадку, вона повинна бути зовнішньою чи місцевою і
+повинна мати визначений тип:</p>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">зовнішня</span><span style="color:#F97583"> стала</span><span style="color:#E1E4E8"> глоб_а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">дія</span><span style="color:#E1E4E8"> запустити() {</span></span>
-<span class="line"><span style="color:#E1E4E8">  глоб_а = </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">  глоб_а = </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// помилка компіляції</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span></code></pre></div></pre>
-<p>Глобальна змінна може бути зовнішньою, місцевою чи внутрішньою.</p>
+<p>Глобальна зовнішня стала не може мати визначене значення:</p>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">зовнішня</span><span style="color:#F97583"> стала</span><span style="color:#E1E4E8"> глоб_а = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// помилка компіляції</span></span>
+<span class="line"></span></code></pre></div></pre>
 
     
     <div class="XDocsPageContentBcFw">
-      <a data-is-prev="true" href="./к-типизація.html">Відступ</a>
-      <a data-is-next="true" href="./к-сталі.html">Наступ</a >
+      <a data-is-prev="true" href="./ц-змінні.html">Відступ</a>
+      <a data-is-next="true" href="./ц-дії.html">Наступ</a >
     </div>
     
   </div>
