@@ -161,7 +161,7 @@
 <span class="line"></span></code></pre></div></pre>
 <pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> назва = значення;</span></span>
 <span class="line"></span></code></pre></div></pre>
-<p>Стала повинна мати визначене значення. Значення сталих не можна перезаписувати:</p>
+<p>Стала повинна мати значення. Значення сталих не можна перезаписувати:</p>
 <pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> а = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#E1E4E8">а = </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// помилка компіляції</span></span>
@@ -170,19 +170,6 @@
 <pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">змінна</span><span style="color:#E1E4E8"> а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8"> = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#F97583">стала</span><span style="color:#E1E4E8"> б = а; </span><span style="color:#6A737D">// б є ціле і б == 10</span></span>
-<span class="line"></span></code></pre></div></pre>
-<p>В Цілі можна створювати глобальні сталі.</p>
-<p>Глобальна стала може бути зовнішньою, місцевою чи внутрішньою.</p>
-<p>Глобальна стала може не мати визначеного значення, але, в такому випадку, вона повинна бути зовнішньою чи місцевою і
-повинна мати визначений тип:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">зовнішня</span><span style="color:#F97583"> стала</span><span style="color:#E1E4E8"> глоб_а: </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">дія</span><span style="color:#E1E4E8"> запустити() {</span></span>
-<span class="line"><span style="color:#E1E4E8">  глоб_а = </span><span style="color:#79B8FF">20</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// помилка компіляції</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre></div></pre>
-<p>Глобальна зовнішня стала не може мати визначене значення:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">зовнішня</span><span style="color:#F97583"> стала</span><span style="color:#E1E4E8"> глоб_а = </span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// помилка компіляції</span></span>
 <span class="line"></span></code></pre></div></pre>
 
     
