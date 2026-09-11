@@ -30,7 +30,9 @@
   --nav-active-text-rgb: 255, 255, 255;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -64,7 +66,8 @@ html.dark {
   --link-rgb: 212, 105, 111;
 }
 
-html.dark img:not(.no-dark-shadow), html.dark svg:not(.no-dark-shadow) {
+html.dark img:not(.no-dark-shadow),
+html.dark svg:not(.no-dark-shadow) {
   filter: drop-shadow(0 0 1px white);
 }
 
@@ -79,7 +82,8 @@ body {
   height: 100%;
 }
 
-pre, code {
+pre,
+code {
   font-family: "Fira Code", monospace !important;
   font-weight: 500;
 }
@@ -88,12 +92,14 @@ a {
   color: rgb(var(--text-rgb));
 }
 
-subject, .XDocsTextSubject {
-  color: #7D2E34;
+subject,
+.XDocsTextSubject {
+  color: #7d2e34;
   font-weight: bold;
 }
 
-keyword, .XDocsTextKeyword {
+keyword,
+.XDocsTextKeyword {
   color: #c678dd;
   font-weight: 500;
 }
@@ -154,7 +160,6 @@ html.mobile .XDocsPage .XDocsPageNavigation {
   justify-content: center;
 }
 .XDocsPage .XDocsPageNavigation .XDocsPageNavigationHead .XDocsPageNavigationHeadLogo img {
-  width: 50px;
   height: 50px;
 }
 .XDocsPage .XDocsPageNavigation .XDocsPageNavigationFooterWrapperSpaceBefore {
@@ -195,7 +200,6 @@ html.mobile .XDocsPage .XDocsPageNavigation .XDocsPageNavigationFooter {
 }
 
 .XDocsPage .XDocsPageNavigation .XDocsPageNavigationFooter img {
-  width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
 }
@@ -374,14 +378,24 @@ html.mobile .XDocsPage .XDocsPageContent {
   justify-content: center;
   margin-bottom: 3rem;
 }
-.XDocsPage .XDocsPageContent h1, .XDocsPage .XDocsPageContent h2, .XDocsPage .XDocsPageContent h3, .XDocsPage .XDocsPageContent h4, .XDocsPage .XDocsPageContent h5, .XDocsPage .XDocsPageContent h6 {
+.XDocsPage .XDocsPageContent h1,
+.XDocsPage .XDocsPageContent h2,
+.XDocsPage .XDocsPageContent h3,
+.XDocsPage .XDocsPageContent h4,
+.XDocsPage .XDocsPageContent h5,
+.XDocsPage .XDocsPageContent h6 {
   position: relative;
   margin-top: 1.5em;
   margin-bottom: 0.75em;
   font-weight: 600;
   line-height: 1.25;
 }
-.XDocsPage .XDocsPageContent h1 .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h2 .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h3 .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h4 .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h5 .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h6 .XDocsHeadingAnchor {
+.XDocsPage .XDocsPageContent h1 .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h2 .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h3 .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h4 .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h5 .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h6 .XDocsHeadingAnchor {
   position: absolute;
   left: -1.25em;
   top: 0;
@@ -395,15 +409,30 @@ html.mobile .XDocsPage .XDocsPageContent {
   opacity: 0;
   transition: opacity 0.15s;
 }
-.XDocsPage .XDocsPageContent h1 .XDocsHeadingAnchor svg, .XDocsPage .XDocsPageContent h2 .XDocsHeadingAnchor svg, .XDocsPage .XDocsPageContent h3 .XDocsHeadingAnchor svg, .XDocsPage .XDocsPageContent h4 .XDocsHeadingAnchor svg, .XDocsPage .XDocsPageContent h5 .XDocsHeadingAnchor svg, .XDocsPage .XDocsPageContent h6 .XDocsHeadingAnchor svg {
+.XDocsPage .XDocsPageContent h1 .XDocsHeadingAnchor svg,
+.XDocsPage .XDocsPageContent h2 .XDocsHeadingAnchor svg,
+.XDocsPage .XDocsPageContent h3 .XDocsHeadingAnchor svg,
+.XDocsPage .XDocsPageContent h4 .XDocsHeadingAnchor svg,
+.XDocsPage .XDocsPageContent h5 .XDocsHeadingAnchor svg,
+.XDocsPage .XDocsPageContent h6 .XDocsHeadingAnchor svg {
   width: 0.7em;
   height: 0.7em;
   fill: currentColor;
 }
-.XDocsPage .XDocsPageContent h1 .XDocsHeadingAnchor:hover, .XDocsPage .XDocsPageContent h2 .XDocsHeadingAnchor:hover, .XDocsPage .XDocsPageContent h3 .XDocsHeadingAnchor:hover, .XDocsPage .XDocsPageContent h4 .XDocsHeadingAnchor:hover, .XDocsPage .XDocsPageContent h5 .XDocsHeadingAnchor:hover, .XDocsPage .XDocsPageContent h6 .XDocsHeadingAnchor:hover {
+.XDocsPage .XDocsPageContent h1 .XDocsHeadingAnchor:hover,
+.XDocsPage .XDocsPageContent h2 .XDocsHeadingAnchor:hover,
+.XDocsPage .XDocsPageContent h3 .XDocsHeadingAnchor:hover,
+.XDocsPage .XDocsPageContent h4 .XDocsHeadingAnchor:hover,
+.XDocsPage .XDocsPageContent h5 .XDocsHeadingAnchor:hover,
+.XDocsPage .XDocsPageContent h6 .XDocsHeadingAnchor:hover {
   color: rgb(var(--link-rgb));
 }
-.XDocsPage .XDocsPageContent h1:hover .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h2:hover .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h3:hover .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h4:hover .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h5:hover .XDocsHeadingAnchor, .XDocsPage .XDocsPageContent h6:hover .XDocsHeadingAnchor {
+.XDocsPage .XDocsPageContent h1:hover .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h2:hover .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h3:hover .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h4:hover .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h5:hover .XDocsHeadingAnchor,
+.XDocsPage .XDocsPageContent h6:hover .XDocsHeadingAnchor {
   opacity: 1;
 }
 .XDocsPage .XDocsPageContent h1 {
@@ -452,12 +481,16 @@ html.mobile .XDocsPage .XDocsPageContent {
 .XDocsPage .XDocsPageContent blockquote a:hover {
   text-decoration-thickness: 2px;
 }
-.XDocsPage .XDocsPageContent ul, .XDocsPage .XDocsPageContent ol {
+.XDocsPage .XDocsPageContent ul,
+.XDocsPage .XDocsPageContent ol {
   padding-left: 2em;
   margin-top: 0;
   margin-bottom: 1em;
 }
-.XDocsPage .XDocsPageContent ul ul, .XDocsPage .XDocsPageContent ul ol, .XDocsPage .XDocsPageContent ol ul, .XDocsPage .XDocsPageContent ol ol {
+.XDocsPage .XDocsPageContent ul ul,
+.XDocsPage .XDocsPageContent ul ol,
+.XDocsPage .XDocsPageContent ol ul,
+.XDocsPage .XDocsPageContent ol ol {
   margin-top: 0.25em;
   margin-bottom: 0;
 }
@@ -583,7 +616,8 @@ table {
   border-collapse: collapse;
   margin-bottom: 1rem;
 }
-table th, table td {
+table th,
+table td {
   padding: 0.5rem;
   border: 1px solid rgb(var(--border-rgb));
 }
