@@ -157,37 +157,37 @@
     
     <h1>Простори</h1>
 <p>Запис просторів в Цілі відбувається так:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> арифметика {</span></span>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> Арифметика {</span></span>
 <span class="line"><span style="color:#F97583">  дія</span><span style="color:#E1E4E8"> додати(</span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#F97583">  дія</span><span style="color:#E1E4E8"> відняти(</span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span></code></pre></div></pre>
 <p>Доступ до субʼєктів простору відбувається через знак <code>::</code>:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span>арифметика::додати(2, 2);</span></span>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span>Арифметика::додати(2, 2);</span></span>
 <span class="line"><span></span></span></code></pre></div></pre>
 <p>Обмежень на глибину вкладених просторів немає:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> а {</span></span>
-<span class="line"><span style="color:#F97583">  простір</span><span style="color:#E1E4E8"> б {</span></span>
-<span class="line"><span style="color:#F97583">    простір</span><span style="color:#E1E4E8"> в {</span></span>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> А {</span></span>
+<span class="line"><span style="color:#F97583">  простір</span><span style="color:#E1E4E8"> Б {</span></span>
+<span class="line"><span style="color:#F97583">    простір</span><span style="color:#E1E4E8"> В {</span></span>
 <span class="line"><span style="color:#6A737D">      // ...</span></span>
 <span class="line"><span style="color:#E1E4E8">    }</span></span>
 <span class="line"><span style="color:#E1E4E8">  }</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">а::б::в::...</span></span>
+<span class="line"><span style="color:#E1E4E8">А::Б::В::...</span></span>
 <span class="line"></span></code></pre></div></pre>
 <p>Простори можна доповнювати:</p>
-<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> арифметика {</span></span>
+<pre><div class="XDocsCodeWrapper"><pre class="shiki github-dark" style="background-color:#24292e;color:#e1e4e8" tabindex="0"><code class="shikicode"><span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> Арифметика {</span></span>
 <span class="line"><span style="color:#F97583">  дія</span><span style="color:#E1E4E8"> додати(</span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#F97583">  дія</span><span style="color:#E1E4E8"> відняти(</span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> арифметика {</span></span>
+<span class="line"><span style="color:#F97583">простір</span><span style="color:#E1E4E8"> Арифметика {</span></span>
 <span class="line"><span style="color:#F97583">  дія</span><span style="color:#E1E4E8"> помножити(</span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#F97583">  дія</span><span style="color:#E1E4E8"> поділити(</span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">) -> </span><span style="color:#79B8FF">ціле</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">арифметика::поділити(</span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">Арифметика::поділити(</span><span style="color:#79B8FF">10</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"></span></code></pre></div></pre>
 
     
